@@ -20,5 +20,6 @@ python3 microgrid_federated_server.py
 
 Open client terminals
 ```
+cd Federated_Microgrid
 python3 microgrid_federated_client.py   
 ```
