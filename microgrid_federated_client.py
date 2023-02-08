@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
+from pathlib import Path
+
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import KFold
@@ -93,4 +95,4 @@ class keggleClient(fl.client.NumPyClient):
 
 
 # Start Flower client
-fl.client.start_numpy_client(server_address="127.0.0.1:8080", client=keggleClient())
+fl.client.start_numpy_client(server_address="127.0.0.1:8080", client=keggleClient(), root_certificates=Path(".cache/certificates/ca.crt").read_bytes())

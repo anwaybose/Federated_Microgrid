@@ -2,6 +2,7 @@ from typing import List, Tuple
 
 import flwr as fl
 from flwr.common import Metrics
+from pathlib import Path
 
 # Define metric aggregation function
 def weighted_average(metrics: List[Tuple[int, Metrics]]) -> Metrics:
@@ -20,4 +21,9 @@ fl.server.start_server(
     server_address="0.0.0.0:8080",
     config=fl.server.ServerConfig(num_rounds=4),
     strategy=strategy,
+    certificates=(
+        Path(".cache/certificates/ca.crt").read_bytes(),
+        Path(".cache/certificates/server.pem").read_bytes(),
+        Path(".cache/certificates/server.key").read_bytes(),
+    )
 )
