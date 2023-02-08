@@ -21,7 +21,7 @@ sudo bash generate.sh
 Open a terminal to run server
 ```
 cd Federated_Microgrid
-python3 microgrid_federated_server.py
+sudo python3 microgrid_federated_server.py
 ```
 
 Open client terminals
