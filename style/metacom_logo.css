@@ -1,0 +1,25 @@
+#title-slide .date::before {
+  content:url('../imgs/ic3n2023.png');
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin: auto;
+  display: block;
+}
+
+#title-slide .date::after {
+  content: "Honolulu, Hawaii, USA";
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+#title-slide .title::before {
+  content:url('../imgs/tu_coe.jpeg');
+  width: 5px;
+  height: auto;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: block;
+}
